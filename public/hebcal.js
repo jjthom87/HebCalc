@@ -29,17 +29,15 @@ $(document).ready(function(){
 
 				var eng = $('<p>');
 
-				th.forEach(function(t){
-					if(th.indexOf(t) > -1){
-						eng.text(results.hd + 'th of ' + results.hm + ', ' + results.hy);
-					} else if (st.indexOf(t) > -1){
-						eng.text(results.hd + 'st of ' + results.hm + ', ' + results.hy);
-					} else if (nd.indexOf(t) > -1){
-						eng.text(results.hd + 'nd of ' + results.hm + ', ' + results.hy);
-					} else if (rd.indexOf(t) > -1){
-						eng.text(results.hd + 'rd of ' + results.hm + ', ' + results.hy);
-					}
-				});
+				if(th.indexOf(results.hd) > -1){
+					eng.text(results.hd + 'th of ' + results.hm + ', ' + results.hy);
+				} else if (st.indexOf(results.hd) > -1){
+					eng.text(results.hd + 'st of ' + results.hm + ', ' + results.hy);
+				} else if (nd.indexOf(results.hd) > -1){
+					eng.text(results.hd + 'nd of ' + results.hm + ', ' + results.hy);
+				} else if (rd.indexOf(results.hd) > -1){
+					eng.text(results.hd + 'rd of ' + results.hm + ', ' + results.hy);
+				}
 
 				var heb = $('<p>');
 				heb.text(results.hebrew);
